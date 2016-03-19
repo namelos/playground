@@ -5,6 +5,11 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     @user = users(:michael)
   end
 
+  # test 'unsuccessful edit' do
+  #   log_in_as(@user)
+  #   get edit_user_path(@user)
+  # end
+
   test 'login with invalid information' do
     get login_path
     assert_template 'sessions/new'
